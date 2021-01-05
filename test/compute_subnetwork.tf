@@ -13,3 +13,11 @@ resource "google_compute_subnetwork" "prv_subnetwork" {
   network       = "sample-network"
   depends_on    = [google_compute_network.sample_network]
 }
+
+resource "google_compute_subnetwork" "prv_subnetwork2" {
+  name          = "sample-subnet-prv2"
+  ip_cidr_range = "10.0.2.0/24"
+  region        = "asia-northeast3"
+  network       = "sample-network"
+  depends_on    = [google_compute_network.sample_network]
+}
