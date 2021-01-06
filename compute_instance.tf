@@ -6,7 +6,7 @@ resource "google_compute_instance" "bastion" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-10"
+      image = "centos-cloud/centos-7"
     }
   }
 
@@ -38,7 +38,7 @@ resource "google_compute_instance" "web_instance" {
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-10"
+      image = "centos-cloud/centos-7"
     }
   }
 
