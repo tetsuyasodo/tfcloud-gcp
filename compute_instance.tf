@@ -23,7 +23,7 @@ resource "google_compute_instance" "bastion" {
   }
   
   metadata = {
-    startup-script = "${file("bastion-test.sh")}"
+    startup-script = file("bastion-test.sh")
   }
   
 }
