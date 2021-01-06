@@ -22,7 +22,7 @@ resource "google_compute_instance" "bastion" {
     scopes = ["cloud-platform"]
   }
   
-  metadata {
+  metadata = {
     startup-script = "${file("bastion-test.sh")}"
   }
   
