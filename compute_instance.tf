@@ -21,6 +21,11 @@ resource "google_compute_instance" "bastion" {
   service_account {
     scopes = ["cloud-platform"]
   }
+  
+  metadata {
+    startup-script = "${file("bastion-test.sh")}"
+  }
+  
 }
 
 resource "google_compute_address" "bastion_external" {
