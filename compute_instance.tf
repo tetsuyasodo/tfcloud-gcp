@@ -55,6 +55,6 @@ resource "google_compute_instance" "web_instance" {
   }
   
     metadata = {
-    startup-script = file("install_nginx.sh")
+    startup-script = file("install_httpd.sh")
   }
 }
