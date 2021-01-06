@@ -11,3 +11,10 @@ resource "google_compute_subnetwork" "prv_subnetwork" {
   region        = "asia-northeast3"
   network       = google_compute_network.sample_network.self_link
 }
+
+resource "google_compute_subnetwork" "prv_subnetwork2" {
+  name          = "sample-subnet-prv2"
+  ip_cidr_range = "10.0.2.0/24"
+  region        = "asia-northeast3"
+  network       = google_compute_network.sample_network.self_link
+}
