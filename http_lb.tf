@@ -48,3 +48,7 @@ resource "google_compute_instance_group" "web_instance_group" {
 
   zone = "asia-northeast3-a"
 }
+
+output "lb-global-address" {
+  value = google_compute_global_address.web-lb.address
+}
