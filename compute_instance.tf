@@ -11,7 +11,7 @@ resource "google_compute_instance" "bastion" {
   }
 
   network_interface {
-    subnetwork = "sample-subnet-pub"
+    subnetwork = google_compute_subnetwork.pub_subnetwork.self_link
 
     access_config {
       nat_ip = google_compute_address.bastion_external.address
@@ -42,7 +42,7 @@ resource "google_compute_instance" "web_instance" {
   }
 
   network_interface {
-    subnetwork = "sample-subnet-prv"
+    subnetwork = google_compute_subnetwork.prv_subnetwork.self_link
 
     # access_config {
     #   nat_ip = google_compute_address.bastion_external.address
