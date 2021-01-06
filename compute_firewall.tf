@@ -30,7 +30,7 @@ resource "google_compute_firewall" "sample_network_allow_http" {
 
   allow {
     protocol = "tcp"
-    ports    = ["5601"]
+    ports    = ["80"]
   }
 
   source_ranges = ["0.0.0.0/0"]
