@@ -1,4 +1,6 @@
 #!/bin/bash
+setenforce 0
+
 yum update -y
 yum install -y httpd
 systemctl start httpd
