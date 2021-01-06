@@ -22,10 +22,6 @@ resource "google_compute_instance" "bastion" {
     scopes = ["cloud-platform"]
   }
   
-  metadata = {
-    startup-script = file("bastion-test.sh")
-  }
-  
 }
 
 resource "google_compute_address" "bastion_external" {
@@ -56,5 +52,9 @@ resource "google_compute_instance" "web_instance" {
 
   service_account {
     scopes = ["cloud-platform"]
+  }
+  
+    metadata = {
+    startup-script = file("install_nginx.sh")
   }
 }
