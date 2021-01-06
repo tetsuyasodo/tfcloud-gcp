@@ -50,5 +50,5 @@ resource "google_compute_instance_group" "web_instance_group" {
 }
 
 output "lb-global-address" {
-  value = google_compute_global_address.web-lb.address
+  value = google_compute_global_address.web_lb.address
 }
