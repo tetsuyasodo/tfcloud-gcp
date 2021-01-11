@@ -14,6 +14,7 @@ variable "machine_type" {
     elasticsearch = "e2-micro"   ## for test
     logstash      = "e2-small"
     beats         = "e2-small"
-    mon           = "e2-medium"
+    #mon           = "e2-medium" ## for academy
+    mon           = "e2-small"   ## for test
   }
 }
