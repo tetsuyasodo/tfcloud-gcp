@@ -2,4 +2,3 @@
 credentials.json
 secret.tfvars
 *.tfstate**
-pubkeys/
