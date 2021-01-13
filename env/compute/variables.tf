@@ -10,11 +10,11 @@ variable "machine_type" {
   default = {
     bastion       = "e2-micro"
     kibana        = "e2-small"
-    #elasticsearch = "e2-medium" ## for academy
-    elasticsearch = "e2-micro"   ## for test
+    elasticsearch = "e2-medium" ## for academy
+    #elasticsearch = "e2-micro"   ## for test
     logstash      = "e2-small"
     beats         = "e2-small"
-    #mon           = "e2-medium" ## for academy
-    mon           = "e2-small"   ## for test
+    mon           = "e2-medium" ## for academy
+    #mon           = "e2-small"   ## for test
   }
 }
