@@ -22,7 +22,7 @@ resource "google_container_cluster" "gke01" {
 
   master_auth {
     username = "admin"
-    password = "P@ssw0rdP@ssw0rd"
+    password = random_password.password.result
 
     client_certificate_config {
       issue_client_certificate = false
@@ -30,3 +30,8 @@ resource "google_container_cluster" "gke01" {
   }
 }
 
+resource "random_password" "password" {
+  length = 16
+  special = true
+  override_special = "_%@"
+}
