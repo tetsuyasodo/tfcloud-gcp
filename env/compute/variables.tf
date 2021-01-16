@@ -1,4 +1,5 @@
 variable "subnet" {}
+variable "network" {}
 
 variable "users" {
   #default = ["user01", "user02", "user03"]
@@ -16,5 +17,6 @@ variable "machine_type" {
     beats         = "e2-small"
     mon           = "e2-medium" ## for academy
     #mon           = "e2-small"   ## for test
+    gke           = "e2-standard-4"
   }
 }
