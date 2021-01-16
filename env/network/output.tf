@@ -3,5 +3,5 @@ output "subnet01" {
 }
 
 output "elastic_network" {
-  value = google_compute_network.elastic_network
+  value = google_compute_network.elastic_network.self_link
 }
