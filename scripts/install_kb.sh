@@ -22,6 +22,10 @@ cat <<EOF >>/etc/kibana/kibana.yml
 server.host: "0.0.0.0"
 elasticsearch.hosts: ["http://es01-$(hostname | awk -F- '{print $2}'):9200"]
 #elasticsearch.hosts: ["http://es01-$(hostname | awk -F- '{print $2}'):9200", "http://es02-$(hostname | awk -F- '{print $2}'):9200", "http://es03-$(hostname | awk -F- '{print $2}'):9200"]
+
+# Password setting
+#elasticsearch.username: "kibana_system"
+#elasticsearch.password: "elastic-2020"
 EOF
 
 systemctl daemon-reload
