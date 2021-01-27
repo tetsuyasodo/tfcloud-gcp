@@ -25,14 +25,14 @@ network.host: 0.0.0.0
 discovery.seed_hosts: ["${HOSTNAME}"]
 cluster.initial_master_nodes:  ["${HOSTNAME}"]
 
-# 3ノードクラスタ構成の設定
+# 3 Node Cluster setting
 #discovery.seed_hosts: ["es01-$(hostname | awk -F- '{print $2}')", "es02-$(hostname | awk -F- '{print $2}')", "es03-$(hostname | awk -F- '{print $2}')"]
 #cluster.initial_master_nodes: ["es01-$(hostname | awk -F- '{print $2}')", "es02-$(hostname | awk -F- '{print $2}')", "es03-$(hostname | awk -F- '{print $2}')"]
 
-# Security機能の有効化
-#xpack.security.enabled: true
+# Security setting
+#xpack.security.enabled: true
 
-# ノード間のTLS通信暗号化の有効化
+# Transport layer encryption setting
 #xpack.security.transport.ssl.enabled: true
 #xpack.security.transport.ssl.verification_mode: certificate
 #xpack.security.transport.ssl.keystore.path: elastic-certificates.p12
