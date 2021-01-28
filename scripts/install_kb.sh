@@ -26,6 +26,9 @@ elasticsearch.hosts: ["http://es01-$(hostname | awk -F- '{print $2}'):9200"]
 # Password setting
 #elasticsearch.username: "kibana_system"
 #elasticsearch.password: "elastic-2020"
+
+# Region/Coordinate Map feature enable setting
+#xpack.maps.showMapVisualizationTypes: true
 EOF
 
 systemctl daemon-reload
