@@ -35,3 +35,23 @@ IP=35.200.15.10
 scp -i ~/.ssh/id_rsa-$USER ~/.ssh/id_rsa-$USER $USER@$IP:~/.ssh/id_rsa  ## this command could make you ssh-login to other hosts without password
 ssh -i ~/.ssh/id_rsa-$USER $USER@$IP
 ```
+
+## GKE access setup (from bastion)
+```
+$ vi credentials.json  ### TFCloudと同じserviceaccount:terraformのjsonを作る(scpでも良い)
+$ gcloud auth activate-service-account --key-file credentials.json
+$ rm credentials.json
+
+$ sudo yum install -y jq kubectl wget
+$ wget https://raw.githubusercontent.com/tetsuyasodo/tfcloud-gcp/main/scripts/basicauth.sh
+$ chmod 755 basicauth.sh
+$ CLUSTER_NAME=gke01 ### クラスタ名は全員共通
+$ USER_NAME=user01 ### 利用者によりuserXXの部分を変えること
+$ ./basicauth.sh $CLUSTER_NAME $USER_NAME
+
+$ mkdir ~/.kube
+$ cp $CLUSTER_NAME-$USER_NAME-kubeconfig ~/.kube/config
+$ kubectl get clusterroles
+$ kubectl get nodes
+
+```
