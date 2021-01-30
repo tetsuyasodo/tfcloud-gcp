@@ -10,3 +10,7 @@ spec:
     name: quickstart
   kibanaRef:
     name: quickstart
+  http:
+    service:
+      spec:
+        type: LoadBalancer
