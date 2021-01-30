@@ -3,7 +3,7 @@ variable "network" {}
 
 variable "users" {
   #default = ["user01", "user02", "user03"]
-  default = ["user01"]
+  default = ["user01", "user02"]
 }
 
 variable "machine_type" {
