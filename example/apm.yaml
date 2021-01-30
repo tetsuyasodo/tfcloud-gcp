@@ -17,4 +17,8 @@ spec:
     tls:
       selfSignedCertificate:
         disabled: true
-        
+  config:
+    name: elastic-apm
+    apm-server:
+      rum.enabled: true
+      ilm.enabled: true
