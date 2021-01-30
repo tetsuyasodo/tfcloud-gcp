@@ -10,6 +10,10 @@ spec:
     name: quickstart
   kibanaRef:
     name: quickstart
+  config:
+    apm-server:
+      rum.enabled: true
+      ilm.enabled: true
   http:
     service:
       spec:
@@ -17,8 +21,3 @@ spec:
     tls:
       selfSignedCertificate:
         disabled: true
-  config:
-    name: elastic-apm
-    apm-server:
-      rum.enabled: true
-      ilm.enabled: true
